@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/crawl.mjs:*)",
+      "Bash(node eval/grade.mjs:*)",
+      "Bash(npm install)",
+      "Bash(npm run:*)",
+      "Bash(npx playwright install:*)"
+    ]
+  }
+}
