@@ -88,3 +88,11 @@ node eval/grade.mjs sample_output/gingerpeople.com/report.md    # phase 5
 
 `/audit <url>` runs the whole pipeline; `/eval <report>` scores an existing report. The commands
 orchestrate; the skills and agents hold the procedure.
+
+## Git
+
+Commit freely with Conventional Commits per `.claude/STYLE.md`. Push only when the user asks,
+case by case, after they have seen the committed work. History-rewriting and destructive
+commands (`git push --force` / `-f` / `--force-with-lease`, `git reset --hard`, `git clean -fd`,
+destructive `git tag`, `rm -rf`) are denied in `.claude/settings.json`. If one is ever truly
+needed, the user runs it directly.
