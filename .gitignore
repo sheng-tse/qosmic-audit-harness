@@ -4,3 +4,9 @@ node_modules/
 **/.DS_Store
 takehome/
 __MACOSX
+
+# This repo's .claude/ IS the deliverable, so override the global ignore of it.
+# Keep Claude Code's local-only state out, though.
+!.claude/
+!.claude/**
+.claude/settings.local.json
