@@ -86,8 +86,9 @@ node scripts/crawl.mjs gingerpeople.com                         # phase 1
 node eval/grade.mjs sample_output/gingerpeople.com/report.md    # phase 5
 ```
 
-`/audit <url>` runs the whole pipeline; `/eval <report>` scores an existing report. The commands
-orchestrate; the skills and agents hold the procedure.
+`/audit <url>` runs the whole pipeline; `/eval <report>` scores an existing report; `/verify`
+confirms every deliverable in `DELIVERABLES.md` is met. The commands orchestrate; the skills and
+agents hold the procedure.
 
 ## Git
 
