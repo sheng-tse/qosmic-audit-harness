@@ -1,0 +1,854 @@
+{
+  "url": "https://zenrojas.com/",
+  "origin": "https://zenrojas.com",
+  "host": "zenrojas.com",
+  "crawledAt": "2026-06-06T03:33:25.599Z",
+  "browser": "chrome",
+  "headful": false,
+  "shopify": {
+    "isShopify": true,
+    "productCount": 12,
+    "collectionCount": 5,
+    "priceRange": {
+      "min": 2,
+      "max": 100,
+      "median": 5
+    },
+    "sampleProducts": [
+      {
+        "title": "Unwind Organic Tea",
+        "handle": "unwind",
+        "price": 12,
+        "tags": [
+          "bacopa herbal tea",
+          "caffeine free relaxation tea",
+          "caffeine free tea blend",
+          "calming herbal tea",
+          "ginger licorice root tea",
+          "herbal detox relaxation tea",
+          "lemon balm peppermint tea",
+          "Loose Leaf",
+          "loose leaf organic tea",
+          "Loose Leaf Tea",
+          "natural calming tea",
+          "Organic",
+          "organic unwind tea",
+          "organic wellness tea",
+          "premium organic loose leaf tea",
+          "Relaxation",
+          "relaxation tea organic",
+          "soothing herbal blend tea",
+          "Stress relief",
+          "stress relief tea blend",
+          "Tea",
+          "Unwind",
+          "unwind organic tea 30g",
+          "unwind tea for sleep",
+          "Zen Rojas",
+          "zen rojas unwind tea"
+        ]
+      },
+      {
+        "title": "Zen Rojas Mug 11oz",
+        "handle": "zen-rojas-mug",
+        "price": 8,
+        "tags": [
+          "30 day warranty mug",
+          "ceramic mug",
+          "daily coffee mug",
+          "eco ceramic cup",
+          "gift for coffee lover",
+          "gift for tea drinker",
+          "gift mug",
+          "kitchen mug",
+          "minimalist mug",
+          "modern mug",
+          "office mug",
+          "tea mug",
+          "wellness mug",
+          "Zen Rojas",
+          "Zen Rojas Mug"
+        ]
+      },
+      {
+        "title": "Zen Rojas Loose Leaf Samplers",
+        "handle": "looseleafsamplers",
+        "price": 2,
+        "tags": [
+          "30 Day Warranty Zen Rojas",
+          "Black tea",
+          "black tea sampler",
+          "Bodyguard Organic Tea",
+          "digestive herbal tea",
+          "Green tea",
+          "green tea sampler",
+          "Heartburn",
+          "Heartburn Organic Tea",
+          "Heartburn relief",
+          "herbal tea sampler",
+          "Immune Support",
+          "immune support tea",
+          "Loose Leaf",
+          "Loose Leaf Tea",
+          "loose leaf tea sampler",
+          "Looseleafsamplers",
+          "Organic",
+          "Organic Black Tea",
+          "Organic Sleep Tea",
+          "organic tea sampler",
+          "Premium Sencha Organic Green Tea",
+          "Relaxation",
+          "Sleep aid",
+          "Sleep tea",
+          "sleep tea blend",
+          "Stress relief",
+          "stress relief tea",
+          "Tea",
+          "Tea Bags",
+          "tea variety pack",
+          "Unwind",
+          "Unwind Organic Tea",
+          "wellness tea collection",
+          "Zen Rojas"
+        ]
+      },
+      {
+        "title": "Zen Rojas Tea Bag Samplers",
+        "handle": "teabagsamplers",
+        "price": 2,
+        "tags": [
+          "30 Day Warranty Zen Rojas",
+          "black tea sampler",
+          "Bodyguard Organic Tea",
+          "digestive herbal tea",
+          "green tea sampler",
+          "Heartburn Organic Tea",
+          "herbal tea sampler",
+          "immune support tea",
+          "Loose Leaf",
+          "loose leaf tea sampler",
+          "Organic",
+          "Organic Black Tea",
+          "Organic Sleep Tea",
+          "organic tea sampler",
+          "Premium Sencha Organic Green Tea",
+          "sleep tea blend",
+          "stress relief tea",
+          "Tea",
+          "Tea Bags",
+          "tea variety pack",
+          "teabagsampler",
+          "Unwind Organic Tea",
+          "wellness tea collection",
+          "Zen Rojas"
+        ]
+      },
+      {
+        "title": "Tea Bags",
+        "handle": "tea-bags",
+        "price": 5,
+        "tags": [
+          "30-day warranty tea product",
+          "black tea bags",
+          "ethically sourced tea",
+          "green tea bags",
+          "healthy tea ritual",
+          "herbal tea bags",
+          "loose tea alternative",
+          "mindfulness tea",
+          "natural tea bags",
+          "organic herbal blend",
+          "organic tea bags",
+          "tea bags wellness",
+          "tea for relaxation",
+          "tea sampler bags",
+          "Zen Rojas",
+          "Zen Rojas Tea Bags"
+        ]
+      },
+      {
+        "title": "Zen Rojas E-giftcard",
+        "handle": "zen-rojas-e-giftcard",
+        "price": 10,
+        "tags": []
+      },
+      {
+        "title": "Organic Sleep Tea",
+        "handle": "organicsleeptea",
+        "price": 12,
+        "tags": [
+          "bedtime tea blend",
+          "best tea for insomnia",
+          "caffeine free tea",
+          "calming tea for sleep",
+          "chamomile sleep tea",
+          "ethically sourced tea australia",
+          "herbal sleep tea",
+          "lavender sleep tea",
+          "lemon balm tea sleep",
+          "Loose Leaf",
+          "Loose Leaf Tea",
+          "natural sleep remedy tea",
+          "nighttime herbal tea zen rojas",
+          "Organic",
+          "organic loose leaf tea sleep",
+          "organic sleep tea australia",
+          "organic tea australia zen rojas",
+          "passionflower tea blend",
+          "relaxation tea blend organic",
+          "skullcap herbal tea",
+          "Sleep aid",
+          "sleep support tea",
+          "Sleep tea",
+          "Stress relief",
+          "Tea",
+          "zen rojas organic sleep tea",
+          "zen rojas tea sleep blend"
+        ]
+      },
+      {
+        "title": "Organic Black Tea",
+        "handle": "blacktea",
+        "price": 8,
+        "tags": [
+          "Antioxidant Rich Tea",
+          "Best Organic Black Tea",
+          "Black tea",
+          "Black Tea Loose Leaf",
+          "Black Tea Sri Lanka India",
+          "Buy Organic Black Tea Online",
+          "Daily Ritual Tea Organic",
+          "Energy Boost Tea Natural",
+          "Ethically Sourced Black Tea",
+          "Full Bodied Black Tea",
+          "High Quality Black Tea",
+          "Hot Or Iced Black Tea",
+          "Loose Leaf",
+          "Loose Leaf Black Tea Organic",
+          "Loose Leaf Tea",
+          "Natural Caffeine Tea",
+          "Organic",
+          "Organic Tea For Energy",
+          "Organic Tea Zen Rojas",
+          "Premium Black Tea Blend",
+          "Stress relief",
+          "Tea",
+          "Zen Rojas Organic Black Tea",
+          "Zen Rojas Tea Collection"
+        ]
+      },
+      {
+        "title": "Tea Infuser",
+        "handle": "tea-seeper",
+        "price": 5,
+        "tags": [
+          "beginner tea infuser",
+          "easy clean tea infuser",
+          "eco friendly tea infuser",
+          "home tea infuser tool",
+          "loose leaf tea infuser",
+          "loose tea brewing tool",
+          "metal tea infuser ball",
+          "portable tea infuser",
+          "reusable tea infuser",
+          "stainless steel tea infuser",
+          "tea accessories Zen Rojas",
+          "tea brewing essentials",
+          "tea brewing infuser",
+          "tea filter infuser",
+          "tea infuser",
+          "tea infuser for loose leaf tea",
+          "tea steeping infuser",
+          "tea strainer",
+          "Zen Rojas"
+        ]
+      },
+      {
+        "title": "Bodyguard Organic Tea",
+        "handle": "bodyguardtea",
+        "price": 13,
+        "tags": [
+          "antioxidant tea blend",
+          "Bodyguard Organic Tea",
+          "Bodyguard Tea 50G",
+          "elderflower tea",
+          "ginger herbal tea",
+          "green tea blend",
+          "gut health tea",
+          "herbal wellness tea",
+          "Immune Support",
+          "immune support tea",
+          "licorice root tea",
+          "linseed tea",
+          "loose leaf immune tea",
+          "Loose Leaf Tea",
+          "natural energy tea",
+          "Organic",
+          "organic detox tea",
+          "organic loose leaf tea",
+          "sencha green tea",
+          "spearmint tea blend",
+          "Stress relief",
+          "Tea",
+          "wellness tea blend",
+          "Zen Rojas Bodyguard Tea",
+          "Zen Rojas Tea"
+        ]
+      },
+      {
+        "title": "Premium Sencha Organic Green Tea",
+        "handle": "premiumsenchagreentea",
+        "price": 13,
+        "tags": [
+          "Clean Energy Tea",
+          "Daily Wellness Tea",
+          "Green tea",
+          "Green Tea Antioxidants",
+          "Green Tea for Focus",
+          "Healthy Green Tea",
+          "Immune Support",
+          "Loose Leaf",
+          "Loose Leaf Green Tea",
+          "Loose Leaf Tea",
+          "Natural Caffeine Tea",
+          "Organic",
+          "Organic Green Tea",
+          "Premium Green Tea Zen Rojas",
+          "Premium Sencha Organic Green Tea",
+          "Refreshing Green Tea Drink",
+          "Smooth Green Tea",
+          "Stress relief",
+          "Tea",
+          "Zen Rojas",
+          "Zen Rojas Tea"
+        ]
+      },
+      {
+        "title": "Heartburn Organic Tea",
+        "handle": "heartburntea",
+        "price": 10,
+        "tags": [
+          "acid reflux relief tea organic",
+          "best tea for acid reflux natural",
+          "caffeine free digestive tea",
+          "calming digestion tea blend",
+          "chamomile herbal tea organic",
+          "Heartburn",
+          "Heartburn relief",
+          "herbal tea for bloating and reflux",
+          "lemon balm tea for digestion",
+          "loose leaf herbal tea 35g",
+          "Loose Leaf Tea",
+          "marshmallow root tea benefits",
+          "natural gut health tea",
+          "Organic",
+          "organic loose leaf digestive tea",
+          "organic tea for heartburn relief",
+          "raspberry leaf herbal tea",
+          "soothing stomach tea blend",
+          "spearmint digestive tea",
+          "stomach soothing herbal blend",
+          "Stress relief",
+          "Tea",
+          "wellness tea Zen Rojas",
+          "Zen Rojas Heartburn Organic Tea"
+        ]
+      }
+    ]
+  },
+  "surfaces": [
+    {
+      "name": "home",
+      "kind": "home",
+      "url": "https://zenrojas.com/",
+      "status": 200,
+      "challenged": false,
+      "screenshot": "screenshots/home.png",
+      "text": "pages/home.txt",
+      "textLength": 4001,
+      "meta": {
+        "title": "Home Page – Zen Rojas",
+        "description": "100% Organic Loose Leaf tea",
+        "ogTitle": "Home Page",
+        "ogImage": "http://zenrojas.com/cdn/shop/files/Logo_1200x1200.png?v=1616214451",
+        "viewport": "width=device-width,initial-scale=1",
+        "favicon": "",
+        "hasLdJson": false,
+        "h1": "",
+        "images": {
+          "total": 13,
+          "sized": 0,
+          "lazy": 7,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 95,
+        "domContentLoaded": 529,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "collection-best-sellers",
+      "kind": "collection",
+      "url": "https://zenrojas.com/collections/best-sellers",
+      "status": 200,
+      "challenged": false,
+      "via": "click",
+      "screenshot": "screenshots/collection-best-sellers.png",
+      "text": "pages/collection-best-sellers.txt",
+      "textLength": 980,
+      "meta": {
+        "title": "Best Sellers – Zen Rojas",
+        "description": "",
+        "ogTitle": "Best Sellers",
+        "ogImage": "http://zenrojas.com/cdn/shop/files/Logo_1200x1200.png?v=1616214451",
+        "viewport": "width=device-width,initial-scale=1",
+        "favicon": "",
+        "hasLdJson": false,
+        "h1": "Best Sellers",
+        "images": {
+          "total": 5,
+          "sized": 0,
+          "lazy": 4,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 24,
+        "domContentLoaded": 237,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "collection-tea-essentials",
+      "kind": "collection",
+      "url": "https://zenrojas.com/collections/tea-essentials",
+      "status": 200,
+      "challenged": false,
+      "via": "goto",
+      "screenshot": "screenshots/collection-tea-essentials.png",
+      "text": "pages/collection-tea-essentials.txt",
+      "textLength": 901,
+      "meta": {
+        "title": "Tea Essentials – Zen Rojas",
+        "description": "",
+        "ogTitle": "Tea Essentials",
+        "ogImage": "http://zenrojas.com/cdn/shop/files/Logo_1200x1200.png?v=1616214451",
+        "viewport": "width=device-width,initial-scale=1",
+        "favicon": "",
+        "hasLdJson": false,
+        "h1": "Tea Essentials",
+        "images": {
+          "total": 4,
+          "sized": 0,
+          "lazy": 3,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 18,
+        "domContentLoaded": 312,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "product-organicsleeptea",
+      "kind": "product",
+      "url": "https://zenrojas.com/products/organicsleeptea",
+      "status": 200,
+      "challenged": false,
+      "via": "goto",
+      "selectedBy": "flagship:homepage-hero",
+      "screenshot": "screenshots/product-organicsleeptea.png",
+      "text": "pages/product-organicsleeptea.txt",
+      "textLength": 2656,
+      "meta": {
+        "title": "Organic Sleep Tea – Zen Rojas",
+        "description": "Drift Into Restful Nights Sip, relax, and let go. Our Organic Sleep Tea combines chamomile, lemon balm, passionflower, lavender, and skullcap to support peaceful, restorative sleep.",
+        "ogTitle": "Organic Sleep Tea",
+        "ogImage": "http://zenrojas.com/cdn/shop/products/image_67f8498a-d9d0-4ee6-8140-bd9e94593c12_1200x1200.jpg?v=1647449769",
+        "viewport": "width=device-width,initial-scale=1",
+        "favicon": "",
+        "hasLdJson": false,
+        "h1": "Organic Sleep Tea",
+        "images": {
+          "total": 10,
+          "sized": 0,
+          "lazy": 0,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 18,
+        "domContentLoaded": 278,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "product-unwind",
+      "kind": "product",
+      "url": "https://zenrojas.com/products/unwind",
+      "status": 200,
+      "challenged": false,
+      "via": "goto",
+      "screenshot": "screenshots/product-unwind.png",
+      "text": "pages/product-unwind.txt",
+      "textLength": 3275,
+      "meta": {
+        "title": "Unwind Organic Tea – Zen Rojas",
+        "description": "Sip, Relax, Restore Take a mindful pause with our Unwind Organic Tea, a calming blend of lemon balm, peppermint, ginger root, licorice root, and bacopa leaves. Naturally caffeine-free and 100% organic, this tea is ethically sourced and crafted to help restore balance in a fast-paced world. Please note: made on equipment that may process nuts and gluten.",
+        "ogTitle": "Unwind Organic Tea",
+        "ogImage": "http://zenrojas.com/cdn/shop/products/image_2b9fd253-a790-4155-be10-c22906e87d21_1200x1200.jpg?v=1628621536",
+        "viewport": "width=device-width,initial-scale=1",
+        "favicon": "",
+        "hasLdJson": false,
+        "h1": "Unwind Organic Tea",
+        "images": {
+          "total": 10,
+          "sized": 0,
+          "lazy": 0,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 15,
+        "domContentLoaded": 252,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "product-zen-rojas-e-giftcard",
+      "kind": "product",
+      "url": "https://zenrojas.com/products/zen-rojas-e-giftcard",
+      "status": 200,
+      "challenged": false,
+      "via": "goto",
+      "screenshot": "screenshots/product-zen-rojas-e-giftcard.png",
+      "text": "pages/product-zen-rojas-e-giftcard.txt",
+      "textLength": 1192,
+      "meta": {
+        "title": "Zen Rojas E-giftcard",
+        "description": "Share the gift of calm. Give someone special the freedom to choose their perfect Zen Rojas tea experience. Whether it’s a moment of mindfulness, warmth, or renewal, our e-gift cards make every occasion meaningful. Available in $10, $25, $50, and $100 denominations.Delivered instantly by email — simple to send, meaningf",
+        "ogTitle": "Zen Rojas E-giftcard",
+        "ogImage": "http://zenrojas.com/cdn/shop/products/reversedlogo_1200x1200.png?v=1667354479",
+        "viewport": "width=device-width,initial-scale=1",
+        "favicon": "",
+        "hasLdJson": false,
+        "h1": "Zen Rojas E-giftcard",
+        "images": {
+          "total": 3,
+          "sized": 0,
+          "lazy": 0,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 169,
+        "domContentLoaded": 252,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "content-faq",
+      "kind": "content",
+      "url": "https://zenrojas.com/pages/faqs",
+      "status": 200,
+      "challenged": false,
+      "via": "goto",
+      "screenshot": "screenshots/content-faq.png",
+      "text": "pages/content-faq.txt",
+      "textLength": 2621,
+      "meta": {
+        "title": "FAQs – Zen Rojas",
+        "description": "Who first discovered tea? The story of tea begins in China. According to legend, in 2737 BC, the Chinese emperor Shen Nung was sitting beneath a tree while his servant boiled drinking water, when some leaves from the tree blew into the water. Shen Nung, a renowned herbalist, decided to try the infusion that his servant had accidentally created. Thus, tea was born! What is the shelf life of tea? Tea doesn't have an expiration date per se if stored properly. However, we have implemented a 2 year shelf life and 6 months once the packaging is opened for guaranteed freshness. All of our products have a lot number and best by date in order to guarantee the quality of our products. What is the best way to store loose leaf tea? We recommend loose leaf tea be stored in an air tight container out of direct sunlight, or in the original packaging. How is your tea decaffeinated? Herbal teas are generally caffeine free because they are made of dried flowers, leaves, seeds, and/or roots. All of our caffeine free blends do not go through a decaffeination process. They are all naturally caffeine free. How much caffeine is in Green tea? There are so many variables in how tea is made which makes it hard to pin down precisely how much caffeine is in Green tea. General speaking, there is 28mg per 8 oz of tea. How much caffeine is in Black tea? Like mentioned with the Green tea there are so many different ways to brew tea. Typically the rule of thumb is 47mg per 8 oz of tea. How much is shipping and how long does it take? Domestically, shipping costs on orders under $30 is $4.90. Free on orders over $30. We ship every Monday, Wednesday, and Friday. We ship USPS priority mailing (2-3 days). Timing and costs will vary Internationally. If you have any further questions please reach out to us via email or just click \"Chat with us\" at the bottom right corner of the screen and we will be happy to help! contact@zenrojas.com",
+        "ogTitle": "FAQs",
+        "ogImage": "http://zenrojas.com/cdn/shop/files/Logo_1200x1200.png?v=1616214451",
+        "viewport": "width=device-width,initial-scale=1",
+        "favicon": "",
+        "hasLdJson": false,
+        "h1": "FAQs",
+        "images": {
+          "total": 1,
+          "sized": 0,
+          "lazy": 0,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 20,
+        "domContentLoaded": 301,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "content-about",
+      "kind": "content",
+      "url": "https://zenrojas.com/pages/aboutus",
+      "status": 200,
+      "challenged": false,
+      "via": "goto",
+      "screenshot": "screenshots/content-about.png",
+      "text": "pages/content-about.txt",
+      "textLength": 1807,
+      "meta": {
+        "title": "About Us – Zen Rojas",
+        "description": "At Zen Rojas, we believe every sip is a reminder to slow down, breathe deeply, and reconnect with the moment. Our teas are crafted to bring harmony to your day — one mindful cup at a time. Veteran owned and family operated, Zen Rojas was born from a simple truth: calm is something we create. Through years of service and travel, we discovered how deeply nature can restore balance and peace. That experience shaped our mission — to provide organic, intentional blends that nourish both body and mind. Every tea we carry is designed to support your wellness — from grounding greens and soothing herbs to uplifting florals that awaken the senses. At our core, Zen Rojas is more than tea. It’s a ritual. A breath. A return to stillness. Thank you for sharing a cup with us. From our family to yours — peace, gratitude, and good tea. Zen Rojas Proudly Veteran-Owned and family operated | Crafted with Intention | Rooted in Calm",
+        "ogTitle": "About Us",
+        "ogImage": "http://zenrojas.com/cdn/shop/files/Logo_1200x1200.png?v=1616214451",
+        "viewport": "width=device-width,initial-scale=1",
+        "favicon": "",
+        "hasLdJson": false,
+        "h1": "About Us",
+        "images": {
+          "total": 1,
+          "sized": 0,
+          "lazy": 0,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 77,
+        "domContentLoaded": 307,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "content-blog",
+      "kind": "content",
+      "url": "https://zenrojas.com/blogs/weekly-blog",
+      "status": 200,
+      "challenged": false,
+      "via": "goto",
+      "screenshot": "screenshots/content-blog.png",
+      "text": "pages/content-blog.txt",
+      "textLength": 2469,
+      "meta": {
+        "title": "Blogs, Recipes & More! – Zen Rojas",
+        "description": "Fresh perspectives, practical insights, and meaningful conversations. Discover the latest articles from Zen Rojas.",
+        "ogTitle": "Blogs, Recipes & More!",
+        "ogImage": "http://zenrojas.com/cdn/shop/files/Logo_1200x1200.png?v=1616214451",
+        "viewport": "width=device-width,initial-scale=1",
+        "favicon": "",
+        "hasLdJson": false,
+        "h1": "Blogs, Recipes & More!",
+        "images": {
+          "total": 7,
+          "sized": 0,
+          "lazy": 6,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 14,
+        "domContentLoaded": 227,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "content-where-to-buy",
+      "kind": "content",
+      "url": "https://zenrojas.com/pages/where-to-buy",
+      "status": 404,
+      "challenged": false,
+      "via": "goto",
+      "screenshot": "screenshots/content-where-to-buy.png",
+      "text": "pages/content-where-to-buy.txt",
+      "textLength": 729,
+      "meta": {
+        "title": "404 Not Found – Zen Rojas",
+        "description": "",
+        "ogTitle": "404 Not Found",
+        "ogImage": "http://zenrojas.com/cdn/shop/files/Logo_1200x1200.png?v=1616214451",
+        "viewport": "width=device-width,initial-scale=1",
+        "favicon": "",
+        "hasLdJson": false,
+        "h1": "404 Page Not Found",
+        "images": {
+          "total": 1,
+          "sized": 0,
+          "lazy": 0,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 151,
+        "domContentLoaded": 186,
+        "load": 0
+      },
+      "state": "soft-error"
+    },
+    {
+      "name": "cart",
+      "kind": "cart",
+      "url": "https://zenrojas.com/cart",
+      "status": 200,
+      "challenged": false,
+      "via": "goto",
+      "screenshot": "screenshots/cart.png",
+      "text": "pages/cart.txt",
+      "textLength": 595,
+      "meta": {
+        "title": "Your Shopping Cart – Zen Rojas",
+        "description": "",
+        "ogTitle": "Your Shopping Cart",
+        "ogImage": "http://zenrojas.com/cdn/shop/files/Logo_1200x1200.png?v=1616214451",
+        "viewport": "width=device-width,initial-scale=1",
+        "favicon": "",
+        "hasLdJson": false,
+        "h1": "Shopping Cart",
+        "images": {
+          "total": 2,
+          "sized": 0,
+          "lazy": 0,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 15,
+        "domContentLoaded": 282,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "home-mobile",
+      "kind": "mobile",
+      "url": "https://zenrojas.com/",
+      "status": 200,
+      "challenged": false,
+      "screenshot": "screenshots/home-mobile.png",
+      "text": "pages/home-mobile.txt",
+      "textLength": 3999,
+      "meta": {
+        "title": "Home Page – Zen Rojas",
+        "description": "100% Organic Loose Leaf tea",
+        "ogTitle": "Home Page",
+        "ogImage": "http://zenrojas.com/cdn/shop/files/Logo_1200x1200.png?v=1616214451",
+        "viewport": "width=device-width,initial-scale=1",
+        "favicon": "",
+        "hasLdJson": false,
+        "h1": "",
+        "images": {
+          "total": 12,
+          "sized": 0,
+          "lazy": 7,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 77,
+        "domContentLoaded": 539,
+        "load": 0
+      },
+      "state": "ok"
+    }
+  ],
+  "tech": {
+    "SSL Certificate": {
+      "status": "Pass",
+      "detail": "HTTPS storefront loaded successfully."
+    },
+    "HTTPS Redirect": {
+      "status": "Pass",
+      "detail": "Requests resolved over HTTPS."
+    },
+    "Sitemap": {
+      "status": "Pass",
+      "detail": "sitemap.xml present (5 entries)."
+    },
+    "Robots.txt": {
+      "status": "Pass",
+      "detail": "robots.txt present, references a sitemap."
+    },
+    "Critical Pages Loading": {
+      "status": "Pass",
+      "detail": "Homepage, 2 collections and 3 products all loaded."
+    },
+    "Meta Tags & Social Previews": {
+      "status": "Pass",
+      "detail": "Page title and Open Graph tags present on the homepage."
+    },
+    "Structured Data": {
+      "status": "Warn",
+      "detail": "No JSON-LD structured data found on the sampled pages."
+    },
+    "Favicon": {
+      "status": "Warn",
+      "detail": "No favicon link found in the homepage head."
+    },
+    "Mobile-Friendly": {
+      "status": "Pass",
+      "detail": "Responsive viewport meta present (\"width=device-width,initial-scale=1\")."
+    },
+    "Page Speed Mobile": {
+      "status": "Warn",
+      "detail": "Mobile homepage load time not measured."
+    },
+    "Page Speed Desktop": {
+      "status": "Warn",
+      "detail": "Desktop homepage load time not measured."
+    },
+    "Broken Links": {
+      "status": "Pass",
+      "detail": "No dead links among 10 sampled."
+    },
+    "Image Optimization": {
+      "status": "Warn",
+      "detail": "10 images sampled; 0 lazy-loaded, none in a modern format."
+    },
+    "Cookie/Privacy": {
+      "status": "Pass",
+      "detail": "Privacy Policy link present; cookie/consent banner detected."
+    },
+    "Checkout Reachable": {
+      "status": "Pass",
+      "detail": "Cart reachable at /cart and cart.js responded."
+    }
+  },
+  "notOk": [
+    {
+      "url": "https://zenrojas.com/pages/where-to-buy",
+      "status": 404,
+      "state": "soft-error"
+    }
+  ],
+  "links": {
+    "sampled": 10,
+    "broken": [],
+    "botBlocked": 0
+  }
+}

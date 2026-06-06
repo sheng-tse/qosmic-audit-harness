@@ -1,0 +1,510 @@
+{
+  "url": "https://gingerpeople.com/",
+  "origin": "https://gingerpeople.com",
+  "host": "gingerpeople.com",
+  "crawledAt": "2026-06-06T03:57:24.644Z",
+  "browser": "chrome",
+  "headful": true,
+  "shopify": {
+    "isShopify": false,
+    "productCount": 0,
+    "collectionCount": 0,
+    "priceRange": null,
+    "sampleProducts": []
+  },
+  "surfaces": [
+    {
+      "name": "home",
+      "kind": "home",
+      "url": "https://gingerpeople.com/",
+      "status": 200,
+      "challenged": false,
+      "screenshot": "screenshots/home.png",
+      "text": "pages/home.txt",
+      "textLength": 5169,
+      "meta": {
+        "title": "The Ginger People - Ginger and Turmeric Food and Beverages",
+        "description": "Fresh ginger and turmeric products that are non-GMO, vegan, and gluten free. Try GIN GINS®, Ginger Rescue®, Juices & Sushi Ginger today.",
+        "ogTitle": "The Ginger People - Ginger and Turmeric Food and Beverages",
+        "ogImage": "https://gingerpeople.com/wp-content/uploads/2024/11/lozenge-slide-e1732210033889.jpeg",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+        "favicon": "https://gingerpeople.com/wp-content/uploads/2021/02/cropped-favicon-150x150.png",
+        "hasLdJson": true,
+        "h1": "Close to Freshness,\nClose to Heart",
+        "images": {
+          "total": 23,
+          "sized": 22,
+          "lazy": 19,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 3247,
+        "domContentLoaded": 4209,
+        "load": 4309
+      },
+      "state": "ok"
+    },
+    {
+      "name": "collection-ginger-rescue-lozenges",
+      "kind": "collection",
+      "url": "https://gingerpeople.com/ginger-rescue-lozenges/",
+      "status": 200,
+      "challenged": false,
+      "via": "click",
+      "screenshot": "screenshots/collection-ginger-rescue-lozenges.png",
+      "text": "pages/collection-ginger-rescue-lozenges.txt",
+      "textLength": 4651,
+      "meta": {
+        "title": "Ginger Rescue® Digestive Wellness Lozenges - The Ginger People US",
+        "description": "Available in two strengths, our new Ginger Rescue® Digestive Wellness Lozenges meet consumer demand for a natural digestive solution that is effective, great tasting and drug free.",
+        "ogTitle": "Ginger Rescue® Digestive Wellness Lozenges - The Ginger People US",
+        "ogImage": "https://gingerpeople.com/wp-content/uploads/2024/11/90905-Lifestyle-BagSpilling.jpg",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+        "favicon": "https://gingerpeople.com/wp-content/uploads/2021/02/cropped-favicon-150x150.png",
+        "hasLdJson": true,
+        "h1": "Real Relief. Real Ginger.",
+        "images": {
+          "total": 37,
+          "sized": 22,
+          "lazy": 34,
+          "modern": 1
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 3011,
+        "domContentLoaded": 3143,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "product-products-ginger-soother-turmeric-gingerade",
+      "kind": "product",
+      "url": "https://gingerpeople.com/products/ginger-soother-turmeric-gingerade/",
+      "status": 200,
+      "challenged": false,
+      "via": "goto",
+      "selectedBy": "flagship:homepage-hero",
+      "screenshot": "screenshots/product-products-ginger-soother-turmeric-gingerade.png",
+      "text": "pages/product-products-ginger-soother-turmeric-gingerade.txt",
+      "textLength": 3593,
+      "meta": {
+        "title": "Ginger Soother® Turmeric Gingerade - The Ginger People US",
+        "description": "An earthy and delicious Turmeric Gingerade tonic that delivers a healthy dose of turmeric.",
+        "ogTitle": "Ginger Soother® Turmeric Gingerade - The Ginger People US",
+        "ogImage": "https://gingerpeople.com/wp-content/uploads/2021/07/Soother_Turmeric_Group_US_500px-2.png",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+        "favicon": "https://gingerpeople.com/wp-content/uploads/2021/02/cropped-favicon-150x150.png",
+        "hasLdJson": true,
+        "h1": "Ginger Soother® Turmeric Gingerade",
+        "images": {
+          "total": 18,
+          "sized": 14,
+          "lazy": 9,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 2827,
+        "domContentLoaded": 3123,
+        "load": 3175
+      },
+      "state": "ok"
+    },
+    {
+      "name": "product-products-gin-gins-original-ginger-chews",
+      "kind": "product",
+      "url": "https://gingerpeople.com/products/gin-gins-original-ginger-chews/",
+      "status": 200,
+      "challenged": false,
+      "via": "goto",
+      "screenshot": "screenshots/product-products-gin-gins-original-ginger-chews.png",
+      "text": "pages/product-products-gin-gins-original-ginger-chews.txt",
+      "textLength": 4022,
+      "meta": {
+        "title": "GIN GINS® Original Ginger Chews - The Ginger People US",
+        "description": "These spicy-sweet, chewy treats are an enjoyable alternative to anti-nausea medicine. Whether you’re treating a belly ache, a bout of nausea or simply indulging yourself, always have these classic, yummy ginger candies in your stash.",
+        "ogTitle": "GIN GINS® Original Ginger Chews - The Ginger People US",
+        "ogImage": "https://gingerpeople.com/wp-content/uploads/2021/03/90502_GinGins_Original_500px.png",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+        "favicon": "https://gingerpeople.com/wp-content/uploads/2021/02/cropped-favicon-150x150.png",
+        "hasLdJson": true,
+        "h1": "GIN GINS® Original Ginger Chews",
+        "images": {
+          "total": 26,
+          "sized": 18,
+          "lazy": 15,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 3064,
+        "domContentLoaded": 3144,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "product-products-fiji-ginger-juice",
+      "kind": "product",
+      "url": "https://gingerpeople.com/products/fiji-ginger-juice/",
+      "status": 200,
+      "challenged": false,
+      "via": "goto",
+      "screenshot": "screenshots/product-products-fiji-ginger-juice.png",
+      "text": "pages/product-products-fiji-ginger-juice.txt",
+      "textLength": 3123,
+      "meta": {
+        "title": "Fiji Ginger Juice - The Ginger People US",
+        "description": "This multi-portion Fiji Ginger Juice shot is ideal for making beverages, from detox shots to smoothies. At last! Ginger made easy. Enjoy the goodness of ginger in its most convenient form. Crack open a bottle to start getting your daily, well-being boost of ginger.",
+        "ogTitle": "Fiji Ginger Juice - The Ginger People US",
+        "ogImage": "https://gingerpeople.com/wp-content/uploads/2022/06/US-90170-Ginger-Juice-8oz.png",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+        "favicon": "https://gingerpeople.com/wp-content/uploads/2021/02/cropped-favicon-150x150.png",
+        "hasLdJson": true,
+        "h1": "Fiji Ginger Juice",
+        "images": {
+          "total": 24,
+          "sized": 17,
+          "lazy": 18,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 3173,
+        "domContentLoaded": 3252,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "content-where-to-buy",
+      "kind": "content",
+      "url": "https://gingerpeople.com/where-to-buy-the-ginger-people-products/",
+      "status": 200,
+      "challenged": false,
+      "via": "click",
+      "screenshot": "screenshots/content-where-to-buy.png",
+      "text": "pages/content-where-to-buy.txt",
+      "textLength": 1638,
+      "meta": {
+        "title": "Where to Buy The Ginger People® Products",
+        "description": "Find where to buy The Ginger People® products like ginger candy, ginger and turmeric juices, juice shots, and Ginger Rescue® - Shop today",
+        "ogTitle": "Where to Buy The Ginger People® Products",
+        "ogImage": "https://gingerpeople.com/wp-content/uploads/2021/08/Mr.Knobs-Lounging-red-square.jpg",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+        "favicon": "https://gingerpeople.com/wp-content/uploads/2021/02/cropped-favicon-150x150.png",
+        "hasLdJson": true,
+        "h1": "",
+        "images": {
+          "total": 6,
+          "sized": 5,
+          "lazy": 4,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 2865,
+        "domContentLoaded": 2926,
+        "load": 2952
+      },
+      "state": "ok"
+    },
+    {
+      "name": "content-faq",
+      "kind": "content",
+      "url": "https://gingerpeople.com/faqs/",
+      "status": 200,
+      "challenged": false,
+      "via": "goto",
+      "screenshot": "screenshots/content-faq.png",
+      "text": "pages/content-faq.txt",
+      "textLength": 2414,
+      "meta": {
+        "title": "Frequently Asked Questions - The Ginger People",
+        "description": "Frequently asked questions are a fast outline of questions we hear regularly, but if you have a specific question, please contact us today.",
+        "ogTitle": "Frequently Asked Questions - The Ginger People",
+        "ogImage": "https://gingerpeople.com/wp-content/uploads/2021/08/Mr.Knobs-Lounging-red-square.jpg",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+        "favicon": "https://gingerpeople.com/wp-content/uploads/2021/02/cropped-favicon-150x150.png",
+        "hasLdJson": true,
+        "h1": "Frequently Asked Questions",
+        "images": {
+          "total": 7,
+          "sized": 6,
+          "lazy": 4,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 2852,
+        "domContentLoaded": 2909,
+        "load": 2936
+      },
+      "state": "ok"
+    },
+    {
+      "name": "content-about",
+      "kind": "content",
+      "url": "https://gingerpeople.com/our-story/",
+      "status": 200,
+      "challenged": false,
+      "via": "goto",
+      "screenshot": "screenshots/content-about.png",
+      "text": "pages/content-about.txt",
+      "textLength": 4902,
+      "meta": {
+        "title": "Our Story - The Ginger People US",
+        "description": "For over 30 years, Bruce and Abbie Leeson have focused their family business around their passion for ginger. Named “Best Product Line” by the National Association of the Specialty Food Trade, The Ginger People offers a product range that honors the authentic, innovative and values-driven fundamentals of their brand.",
+        "ogTitle": "Our Story - The Ginger People US",
+        "ogImage": "https://gingerpeople.com/wp-content/uploads/2024/12/TGP-2022-Fiji-Images-TVierus-4-mcr-crop-scaled.jpg",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+        "favicon": "https://gingerpeople.com/wp-content/uploads/2021/02/cropped-favicon-150x150.png",
+        "hasLdJson": true,
+        "h1": "OUR STORY",
+        "images": {
+          "total": 10,
+          "sized": 9,
+          "lazy": 7,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 2962,
+        "domContentLoaded": 3012,
+        "load": 0
+      },
+      "state": "ok"
+    },
+    {
+      "name": "content-recipes",
+      "kind": "content",
+      "url": "https://gingerpeople.com/our-recipes/",
+      "status": 200,
+      "challenged": false,
+      "via": "click",
+      "screenshot": "screenshots/content-recipes.png",
+      "text": "pages/content-recipes.txt",
+      "textLength": 1652,
+      "meta": {
+        "title": "Recipes - The Ginger People US",
+        "description": "",
+        "ogTitle": "Recipes - The Ginger People US",
+        "ogImage": "https://gingerpeople.com/wp-content/uploads/2021/08/Mr.Knobs-Lounging-red-square.jpg",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+        "favicon": "https://gingerpeople.com/wp-content/uploads/2021/02/cropped-favicon-150x150.png",
+        "hasLdJson": true,
+        "h1": "",
+        "images": {
+          "total": 118,
+          "sized": 117,
+          "lazy": 4,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 3130,
+        "domContentLoaded": 3385,
+        "load": 3575
+      },
+      "state": "ok"
+    },
+    {
+      "name": "content-blog",
+      "kind": "content",
+      "url": "https://gingerpeople.com/health-blog/",
+      "status": 200,
+      "challenged": false,
+      "via": "click",
+      "screenshot": "screenshots/content-blog.png",
+      "text": "pages/content-blog.txt",
+      "textLength": 1650,
+      "meta": {
+        "title": "Health Blog - The Ginger People US",
+        "description": "Our registered dietitians are here to provide you with research-based and surprisingly easy-reading health articles, each with citations to supporting clinical research—reliable information for your journey to better health.",
+        "ogTitle": "Health Blog - The Ginger People US",
+        "ogImage": "https://gingerpeople.com/wp-content/uploads/2021/07/HealthBlog_Header-mobile.jpg",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+        "favicon": "https://gingerpeople.com/wp-content/uploads/2021/02/cropped-favicon-150x150.png",
+        "hasLdJson": true,
+        "h1": "",
+        "images": {
+          "total": 46,
+          "sized": 45,
+          "lazy": 43,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 2870,
+        "domContentLoaded": 2919,
+        "load": 2948
+      },
+      "state": "ok"
+    },
+    {
+      "name": "cart",
+      "kind": "cart",
+      "url": "https://gingerpeople.com/cart",
+      "status": 404,
+      "challenged": false,
+      "via": "goto",
+      "screenshot": "screenshots/cart.png",
+      "text": "pages/cart.txt",
+      "textLength": 1739,
+      "meta": {
+        "title": "Page not found - The Ginger People US",
+        "description": "",
+        "ogTitle": "Page not found - The Ginger People US",
+        "ogImage": "",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+        "favicon": "https://gingerpeople.com/wp-content/uploads/2021/02/cropped-favicon-150x150.png",
+        "hasLdJson": true,
+        "h1": "Oops. Captain, we’re lost.",
+        "images": {
+          "total": 7,
+          "sized": 6,
+          "lazy": 4,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 2757,
+        "domContentLoaded": 2803,
+        "load": 2833
+      },
+      "state": "soft-error"
+    },
+    {
+      "name": "home-mobile",
+      "kind": "mobile",
+      "url": "https://gingerpeople.com/",
+      "status": 200,
+      "challenged": false,
+      "screenshot": "screenshots/home-mobile.png",
+      "text": "pages/home-mobile.txt",
+      "textLength": 4273,
+      "meta": {
+        "title": "The Ginger People - Ginger and Turmeric Food and Beverages",
+        "description": "Fresh ginger and turmeric products that are non-GMO, vegan, and gluten free. Try GIN GINS®, Ginger Rescue®, Juices & Sushi Ginger today.",
+        "ogTitle": "The Ginger People - Ginger and Turmeric Food and Beverages",
+        "ogImage": "https://gingerpeople.com/wp-content/uploads/2024/11/lozenge-slide-e1732210033889.jpeg",
+        "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",
+        "favicon": "https://gingerpeople.com/wp-content/uploads/2021/02/cropped-favicon-150x150.png",
+        "hasLdJson": true,
+        "h1": "Close to Freshness,\nClose to Heart",
+        "images": {
+          "total": 19,
+          "sized": 18,
+          "lazy": 16,
+          "modern": 0
+        },
+        "hasPrivacyLink": true,
+        "hasCookieBanner": true
+      },
+      "perf": {
+        "ttfb": 3311,
+        "domContentLoaded": 3890,
+        "load": 4061
+      },
+      "state": "ok"
+    }
+  ],
+  "tech": {
+    "SSL Certificate": {
+      "status": "Pass",
+      "detail": "HTTPS storefront loaded successfully."
+    },
+    "HTTPS Redirect": {
+      "status": "Pass",
+      "detail": "Requests resolved over HTTPS."
+    },
+    "Sitemap": {
+      "status": "Warn",
+      "detail": "sitemap.xml returned 403 to the crawler (bot-blocked, not confirmed absent)."
+    },
+    "Robots.txt": {
+      "status": "Pass",
+      "detail": "robots.txt present, references a sitemap."
+    },
+    "Critical Pages Loading": {
+      "status": "Pass",
+      "detail": "Homepage, 1 collections and 3 products all loaded."
+    },
+    "Meta Tags & Social Previews": {
+      "status": "Pass",
+      "detail": "Page title and Open Graph tags present on the homepage."
+    },
+    "Structured Data": {
+      "status": "Pass",
+      "detail": "JSON-LD found on the product page."
+    },
+    "Favicon": {
+      "status": "Pass",
+      "detail": "Favicon link present."
+    },
+    "Mobile-Friendly": {
+      "status": "Pass",
+      "detail": "Responsive viewport meta present (\"width=device-width, initial-scale=1.0, m\")."
+    },
+    "Page Speed Mobile": {
+      "status": "Warn",
+      "detail": "Mobile homepage load event at 4.1s (navigation timing)."
+    },
+    "Page Speed Desktop": {
+      "status": "Warn",
+      "detail": "Desktop homepage load event at 4.3s (navigation timing)."
+    },
+    "Broken Links": {
+      "status": "Fail",
+      "detail": "0 of 10 sampled internal links dead (404/410/5xx); /cart returned 404."
+    },
+    "Image Optimization": {
+      "status": "Warn",
+      "detail": "18 images sampled; 9 lazy-loaded, none in a modern format."
+    },
+    "Cookie/Privacy": {
+      "status": "Pass",
+      "detail": "Privacy Policy link present; cookie/consent banner detected."
+    },
+    "Checkout Reachable": {
+      "status": "Fail",
+      "detail": "Cart edge at /cart returned 404; checkout not entered."
+    }
+  },
+  "notOk": [
+    {
+      "url": "https://gingerpeople.com/cart",
+      "status": 404,
+      "state": "soft-error"
+    }
+  ],
+  "links": {
+    "sampled": 10,
+    "broken": [],
+    "botBlocked": 10
+  }
+}

@@ -44,7 +44,7 @@ The harness produces and scores a real audit for a store it has never seen.
       scorecard and writes `eval.json`.*
 - [x] `eval/cases/` with at least one graded reference audit. *Exit: the grader runs green
       against it and fails on a deliberately broken copy.*
-- [ ] `sample_output/` for both test stores. *Exit: both reports clear the gate and the
+- [x] `sample_output/` for both test stores. *Exit: both reports clear the gate and the
       audit-reviewer signs off; coverage beats the prototype, gingerpeople deep pages included.*
 - [ ] `README.md`, `AGENTS.md`, `package.json`, root `.gitignore`. *Exit: a fresh clone runs
       `npm install` then `node scripts/crawl.mjs <url>` with no extra setup.*

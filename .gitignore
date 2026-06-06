@@ -12,9 +12,10 @@ __MACOSX
 sample_output/**/crawl/data/
 sample_output/**/crawl/pages/
 
-# grade.mjs writes eval.json next to whatever report it grades. The committed
-# fixtures are the report and manifest; the scored output is a byproduct.
+# grade.mjs writes eval.json next to whatever report it grades, and a clone
+# regenerates the score by running it, so the scored output is a byproduct.
 eval/cases/**/eval.json
+sample_output/**/eval.json
 
 # This repo's .claude/ IS the deliverable, so override the global ignore of it.
 # Keep Claude Code's local-only state out, though.
