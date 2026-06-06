@@ -1,42 +1,57 @@
-# How this gets built
+# How I work with coding agents
 
-The harness is built the way it runs: an agent does the work, a second agent checks it, and a
-human steers between milestones. This is the day-to-day loop.
+Most of my work runs through one setup. Each repo gets a `.claude/` harness, the agent does the
+building, I set the rules and the destination. The projects have little in common. An open-source
+accelerator compiler (`strata`), a from-scratch Neovim notebook plugin (`jupynvim`), two ML
+research projects, this audit harness. The way I delegate to agents holds across all of them. The
+driver is Claude Code on Opus, and the real work lives in what I put in the repo rather than what I
+type into the chat.
 
-## One milestone at a time
+## A harness per repo, not a chat
 
-`ROADMAP.md` is the source of what gets built next. `/next` reads it, finds the first unchecked
-milestone, and surfaces three things: the milestone, its exit criterion, and the command to run.
-Nothing gets built until the human confirms. `/build` then runs the milestone end to end: plan,
-implement, hand the diff to the `code-reviewer`, verify the exit criterion by running the actual
-command it names, and only then tick the box and commit. A milestone is done because its exit
-criterion passed, not because the code looks right. Each commit is one milestone, so the history
-reads as the build.
+Every project gets a `CLAUDE.md` that holds the rulebook (priorities, repo orientation, the
+conventions that don't bend) and a `ROADMAP.md` that holds the destination (phases and milestones,
+each with an observable exit criterion). A `/next` command reads the roadmap and surfaces the first
+un-ticked milestone, and nothing gets built until I confirm it. A `/build`-style command then takes
+that milestone end to end. In `strata` the rulebook fixes performance parity as priority #1 and the
+FFI boundary as load-bearing, which keeps the agent optimizing against a vendor baseline instead of
+guessing. A few rules travel between every repo. Conventional Commits, no AI watermark on commits,
+stop at the first failing step.
 
-## Two reviewers, no self-certifying
+## Subagents are roles, not helpers
 
-Every change meets a reviewer the author does not get to overrule. The `code-reviewer` reads each
-diff for correctness, whether the exit criterion is actually met, and STYLE compliance, and returns
-required changes or a sign-off. Every drafted audit meets the `audit-reviewer`, which checks each
-claim against the artifact it cites, not just that the file exists. Both have caught real problems:
-the crawler reporting a bot-blocking 403 as a broken link, and a sample-store draft that claimed
-the store had no shipping threshold when a banner advertised one on every page. Nothing ships on
-the agent's own say-so.
+I build subagents that hold a role and an epistemic stance, with their tools cut down to fit.
+`strata` has a `perf-engineer` that grounds every claim in a profile line and rejects proposals
+with no measurement behind them, alongside a `kernel-author`, a `security-auditor`, and a
+`code-reviewer`. This harness has a `code-reviewer`, an `audit-reviewer` that checks each claim
+against the artifact it cites, and a `competitor-researcher`. The point of all of them is a
+reviewer the main loop cannot overrule, so nothing ships on the implementing agent's own say-so.
 
-## Skills hold the procedure, agents hold the roles
+## Commands compose the pipeline
 
-The work is split so context stays small. Skills are procedures the main agent loads when it needs
-them: how to crawl a Cloudflare-protected store, how to reason over a manifest, how to write the
-report, how to grade it. Agents are roles with their own context and tools: the two reviewers and
-the competitor researcher. Commands orchestrate: `/audit` runs the full pipeline, `/eval` scores a
-report, `/verify` checks the deliverables. The runtime audit takes the same shape, each pipeline
-step writing artifacts to disk so the next step reads files, not one agent's memory.
+Slash commands wire the agents and skills into a pipeline with auditable gates. In `strata`,
+`/ship-op` runs the kernel-author, then a benchmark, then a code-review, then a security-audit
+triage that greps the diff for `unsafe`, FFI, and codegen and either invokes the auditor or records
+the skip with the grep result, so the decision lands on the record either way. This harness's
+`/audit` and `/build` take the same shape. Skills hold the procedures, agents hold the roles,
+commands wire them together.
 
-## Where the human steers
+## Guardrails and memory live in the repo
 
-The agent drives the building; the human makes the calls that need judgment. Confirming each
-milestone before it runs. Deciding that the pillar-balance rule was stricter than the brief and
-should warn only at a true wall, not a justified lean. Killing a thin deliverable rather than
-padding it, as with a third sample store that no crawl covered cleanly. Those decisions, and why
-they were made, are recorded in `AGENT_LOG.md`, so the history shows where the agent drove and
-where it was steered.
+`settings.json` fixes what the agent may run unattended and what it may not. It allows each
+project's toolchain, the cargo and clang and MLIR commands in `strata`, node and Playwright here,
+and it denies the destructive ones, force-push and `reset --hard` and `rm -rf`. Long-running
+context lives in files rather than the chat. Status snapshots go in `memory/`, a gitignored runbook
+holds the cluster env for the GPU research repos, and an `AGENTS.md` sits beside `CLAUDE.md` in
+`jupynvim` so a non-Claude agent has an entry point too. Sessions resume clean because the state
+sits on disk.
+
+## What I drive vs. what the agent drives
+
+The agent drives implementation and verification, milestone after milestone. I take the wheel on
+the calls that are expensive to reverse or need taste. The architecture and priorities that go in
+`CLAUDE.md`. The milestone confirmations. The judgment calls, performance as the compiler's first
+priority, holding a research eval to matched-budget baselines and ablations rather than one number,
+recalibrating the pillar rule here and refusing to ship a thin third audit. The standard stays
+constant across all of it, from `jupynvim`'s "no degraded fallbacks as final answers" on down. The
+agent does the work, the bar is mine.
