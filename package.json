@@ -6,7 +6,11 @@
   "description": "Runtime audit harness: turn a storefront URL into a CRO audit.",
   "scripts": {
     "crawl": "node scripts/crawl.mjs",
-    "test:eval": "node eval/cases/run.mjs"
+    "test:eval": "node eval/cases/run.mjs",
+    "postinstall": "playwright install chromium"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "dependencies": {
     "playwright": "^1.49.0"
