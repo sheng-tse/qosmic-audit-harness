@@ -24,7 +24,7 @@ outside it.
 ## The report contract (every audit, enforced by the grader)
 - [ ] Four sections in order: executive summary (prose), proposed experiments, competitor
       analysis, technical checks.
-- [ ] Exactly 10 experiments, spanning all five pillars, none used more than three times.
+- [ ] Exactly 10 experiments, spanning all five pillars, with no single pillar holding half the audit.
 - [ ] Every experiment's evidence resolves to a captured artifact.
 - [ ] The technical-checks table matches the crawl manifest, no fabricated statuses.
 
