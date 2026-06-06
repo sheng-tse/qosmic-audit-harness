@@ -25,7 +25,7 @@ and steering time is mine to add and is not in the numbers below.
 
 | Phase 1 stage | Active build time |
 |---|---|
-| Harness scaffold, build loop, acceptance gate | set up in the planning thread (steer time: ___) |
+| Harness scaffold, build loop, acceptance gate | set up in the planning thread (steer time: 30m) |
 | Calibration anchor | 6m |
 | Crawler — Playwright, Cloudflare clearance, flagship + second-hop | 104m |
 | Grader + rubric (+ pillar-balance recalibration) | 27m |
