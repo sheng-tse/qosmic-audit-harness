@@ -48,7 +48,7 @@ The harness produces and scores a real audit for a store it has never seen.
       audit-reviewer signs off; coverage beats the prototype, gingerpeople deep pages included.*
 - [x] `README.md`, `AGENTS.md`, `package.json`, root `.gitignore`. *Exit: a fresh clone runs
       `npm install` then `node scripts/crawl.mjs <url>` with no extra setup.*
-- [ ] `EVAL_LOOP.md`, `AGENT_LOG.md`, `WORKFLOWS.md`. *Exit: the three docs exist and read clean.*
+- [x] `EVAL_LOOP.md`, `AGENT_LOG.md`, `WORKFLOWS.md`. *Exit: the three docs exist and read clean.*
 - [ ] All deliverables pass `/verify` against `DELIVERABLES.md`, the Loom being the only manual
       item. *Exit: `/verify` reports every automated check PASS.*
 
