@@ -19,7 +19,8 @@ way the anchor does, then `## Executive summary` as the header so it parses.
 ## 2. Proposed experiments
 
 Exactly 10, ordered by impact, in the canonical schema (see `CLAUDE.md`). Check the spread before
-moving on: every pillar present, none over three, roughly two each.
+moving on: every pillar present, weight where the leaks are, and no single pillar holding half
+the audit.
 
 ## 3. Competitor analysis
 

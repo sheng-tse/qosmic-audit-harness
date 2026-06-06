@@ -40,7 +40,8 @@ Tie both to evidence strength and severity, not to a feeling.
 ## Coverage check before you hand off
 
 - Exactly 10 experiments.
-- Each pillar appears at least once; none more than 3. Target roughly 2 each.
+- Each pillar appears at least once. Weight where the leaks are, but don't let one pillar hold
+  half the audit.
 - Every experiment cites a manifest artifact.
 - At least one experiment addresses anything the crawl found broken (`Fail` in `tech`, or a
   `status >= 400` surface). Observed breakage is the most defensible experiment you have.

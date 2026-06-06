@@ -17,16 +17,18 @@ when no crawl manifest is on hand, so the gate still runs on structure and schem
 | Experiment count | yes | exactly 10 experiments | any other count |
 | Experiment schema | yes | every experiment has a valid `exp-<12 hex>` id and all ten labeled fields, with `Expected lift` as `+X-Y%`, `Confidence` as `NN%`, and a real pillar | any field missing or malformed |
 | Pillar coverage | yes | all five pillars appear | a pillar has no experiment |
-| Pillar balance | no | no pillar holds more than 3 | one pillar holds 4+ (warn) |
+| Pillar balance | no | no single pillar holds half the experiments | one pillar holds half or more, 5+ of 10 (warn) |
 | Competitors | yes | the table carries 3-4 rows with domains | wrong row count (fail) or rows without domains (warn) |
 | Citation grounding | yes | every experiment's `Evidence` resolves to a screenshot or URL in the manifest | a cited artifact is absent from the manifest |
 | Tech-check fidelity | yes | each report tech status matches the manifest's status for that check | a status is changed from what the crawl found |
 | Generalization | no | no template tokens or placeholder text | `example.com`, `lorem ipsum`, `<token>`, etc. leak through |
 | Prose hygiene | no | the summary and competitor prose are clean of the usual tells | LLM vocabulary, throat-clearing, or a pile of em-dashes show up |
 
-Pillar balance is a warn, not a gate, on purpose: the calibration anchor itself runs four
-Conversion experiments because the buy path is the store's real leak. Coverage is the
-hard rule; concentration is a judgment call prioritization can win.
+Pillar balance warns only at a true wall: one pillar holding half the experiments or more. A
+lean of three or four toward where the leaks are passes clean, which is why the calibration
+anchor scores 100 while running four Conversion experiments. Coverage of all five pillars is
+the hard rule; whether a given concentration is justified is the J3 judged pass's call, not
+the script's.
 
 **Score** is the share of checks earned, Pass full and Warn half, Skip excluded. **Gate**
 is independent: it passes only when no critical check failed. A report can score 80 and

@@ -19,7 +19,8 @@ changes, or you sign off.
    "not inspected" with lowered confidence. Flag confident claims about pages the crawl never saw.
 3. **Numbers.** Every price, count, or metric must trace to `manifest.json` catalog facts or
    `manifest.tech`. Flag invented numbers, fake review counts, made-up traffic.
-4. **Pillar balance.** All five pillars present, none over three.
+4. **Pillar balance.** All five pillars present, and no single pillar holding half the audit.
+   A lean toward where the leaks are is fine; flag only a wall.
 5. **Schema and specificity.** Each experiment has all fields, a concrete buildable change, one
    KPI, a guardrail, a plausible lift range, and a calibrated confidence.
 6. **Prose.** The executive summary leads with the real biggest leak and reads like a person

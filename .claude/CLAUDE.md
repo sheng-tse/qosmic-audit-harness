@@ -16,8 +16,9 @@ roles live in `.claude/agents/`, the build plan is `ROADMAP.md`, and the writing
 
 1. **Executive summary** — 2-3 paragraphs of prose. The highest-level read on what is costing
    the store sales. No lists.
-2. **Proposed experiments** — exactly 10 in the canonical schema below, spanning all five
-   pillars (Conversion, AOV, Retention, Acquisition, Performance), none more than 3.
+2. **Proposed experiments** — exactly 10 in the canonical schema below. Span all five pillars
+   (Conversion, AOV, Retention, Acquisition, Performance); put weight where the leaks are, but
+   don't let one pillar hold half the audit.
 3. **Competitor analysis** — a table against 3-4 real, in-category competitors.
 4. **Technical checks** — about 15 checks, each Pass / Warn / Fail with a one-line detail,
    taken from the crawl manifest, not guessed.
@@ -73,7 +74,8 @@ not proof a page is broken for shoppers.
 
 - **Cite everything.** Every claim ties to a real manifest artifact. The reviewer rejects a
   claim the evidence does not actually support, not only one whose file is missing.
-- **Diversify pillars.** Roughly two each across the five, never more than three in one.
+- **Diversify pillars.** All five must appear; put weight where the leaks are, but don't let one
+  pillar hold half the audit.
 - **Generalize.** Nothing hardcodes a specific store. Findings come from that store's manifest.
 - **Be specific.** "Median price $5, no bundle over $20" beats "consider raising AOV."
 - **Ship only what the reviewer passes.**

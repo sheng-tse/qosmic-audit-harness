@@ -135,10 +135,14 @@ function checkPillarCoverage(counts) {
 }
 
 function checkPillarBalance(counts) {
-  const over = Object.entries(counts).filter(([, n]) => n > 3);
+  // A lean toward where the leaks are is fine; one pillar holding half the audit is
+  // a wall. Whether a given concentration is justified is the J3 judged pass's call.
+  const total = Object.values(counts).reduce((a, b) => a + b, 0);
+  const wall = Math.ceil(total / 2);
+  const over = Object.entries(counts).filter(([, n]) => n > 0 && n >= wall);
   return over.length
-    ? { ...Warn(`${over.map(([p, n]) => `${p} has ${n}`).join(', ')} (max 3)`), critical: false }
-    : { ...Pass('no pillar exceeds 3'), critical: false };
+    ? { ...Warn(`${over.map(([p, n]) => `${p} holds ${n} of ${total}`).join(', ')} (half or more of the audit)`), critical: false }
+    : { ...Pass('weight is spread; no pillar holds half the audit'), critical: false };
 }
 
 function checkCompetitors(rows) {
