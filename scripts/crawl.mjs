@@ -74,6 +74,18 @@ function looksLikeChallenge(status, title, bodySample) {
   return false;
 }
 
+// Classify how a surface resolved, past the bare status code. A 4xx/5xx that still
+// paints a full body is a reachable custom error page (soft) — a different finding
+// from a blank hard error, a bot challenge, or a host that never answered. /cart's
+// branded 404 is the canonical soft error: the route is gone, but the server hands
+// the shopper a real page, so "blocked" would misdescribe it.
+function classifySurface(entry) {
+  if (entry.challenged) return 'challenged';
+  if (!entry.status) return 'unreachable';
+  if (entry.status < 400) return 'ok';
+  return (entry.textLength || 0) > 200 ? 'soft-error' : 'hard-error';
+}
+
 // ---------------------------------------------------------------- browser
 
 async function openBrowser({ headful, cdp }) {
@@ -345,14 +357,13 @@ async function main() {
   const request = context.request;
 
   const surfaces = [];
-  const blocked = [];
+  const notOk = [];
   const record = (entry) => {
+    entry.state = classifySurface(entry);
     surfaces.push(entry);
-    if (entry.challenged || entry.status === 0 || entry.status >= 400) {
-      blocked.push({ url: entry.url, status: entry.status, challenged: !!entry.challenged });
-    }
-    const flag = entry.challenged ? ' [challenged]' : '';
-    console.log(`  ${String(entry.status).padStart(3)} ${entry.kind.padEnd(10)} ${entry.url}${flag}`);
+    if (entry.state !== 'ok') notOk.push({ url: entry.url, status: entry.status, state: entry.state });
+    const tag = entry.state === 'ok' ? '' : ` [${entry.state}]`;
+    console.log(`  ${String(entry.status).padStart(3)} ${entry.kind.padEnd(10)} ${entry.url}${tag}`);
   };
 
   // --- homepage first: clearing it clears Cloudflare for the rest of the session
@@ -483,7 +494,7 @@ async function main() {
     shopify: { isShopify: shopify.isShopify, productCount: shopify.productCount, collectionCount: shopify.collectionCount, priceRange: shopify.priceRange, sampleProducts: shopify.sampleProducts },
     surfaces,
     tech,
-    blocked,
+    notOk,
     links: { sampled: links.sampled, broken: brokenLinks.map((l) => ({ href: l.href, status: l.status })), botBlocked: botBlocked.length },
   };
   await writeFile(join(dirs.root, 'manifest.json'), JSON.stringify(manifest, null, 2));
@@ -491,8 +502,8 @@ async function main() {
   if (!attached) await browser.close();
   else await browser.close().catch(() => {});
 
-  const reached = surfaces.filter((s) => s.status === 200 && !s.challenged).length;
-  console.log(`\ndone: ${reached}/${surfaces.length} surfaces reached, ${blocked.length} blocked. manifest -> ${join(dirs.root, 'manifest.json')}`);
+  const reached = surfaces.filter((s) => s.state === 'ok').length;
+  console.log(`\ndone: ${reached}/${surfaces.length} surfaces reached, ${notOk.length} not OK. manifest -> ${join(dirs.root, 'manifest.json')}`);
 }
 
 // ---------------------------------------------------------------- tech checks

@@ -32,7 +32,11 @@ sample_output/<host>/crawl/
 
 ## Reading the manifest
 
-- `surfaces[]` — each page with `status`, `screenshot`, `text`, extracted `meta`, `perf`.
+- `surfaces[]` — each page with `status`, `state`, `screenshot`, `text`, extracted `meta`, `perf`.
+  `state` is one of `ok`, `soft-error`, `hard-error`, `challenged`, `unreachable`. A `soft-error`
+  is a page the server answered with a 4xx/5xx but still rendered, like `/cart`'s branded 404: it
+  is reachable, so read it for what it reveals (an absent feature), not as a page that failed to load.
+- `notOk[]` — every surface whose `state` is not `ok`, each with its `status` and `state`.
 - `shopify` — `productCount`, `priceRange` (min/max/median), `sampleProducts[]` with tags. This
   is your fuel for AOV and SEO reasoning.
 - `tech` — 15 grounded checks, each `{status, detail}`.
