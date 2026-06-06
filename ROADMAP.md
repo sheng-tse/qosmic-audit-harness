@@ -40,7 +40,7 @@ The harness produces and scores a real audit for a store it has never seen.
 - [x] `scripts/crawl.mjs` that captures deep pages on Cloudflare stores (one cleared session and
       click-through, headful, CDP attach). *Exit: the calibration store's PDP, Where To Buy, and
       cart are captured at their real status, not a blanket 403.*
-- [ ] `eval/grade.mjs` and `eval/rubric.md`. *Exit: `node eval/grade.mjs <report>` prints a
+- [x] `eval/grade.mjs` and `eval/rubric.md`. *Exit: `node eval/grade.mjs <report>` prints a
       scorecard and writes `eval.json`.*
 - [ ] `eval/cases/` with at least one graded reference audit. *Exit: the grader runs green
       against it and fails on a deliberately broken copy.*
