@@ -1,0 +1,13 @@
+{
+  "name": "qosmic-audit-harness",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Runtime audit harness: turn a storefront URL into a CRO audit.",
+  "scripts": {
+    "crawl": "node scripts/crawl.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}

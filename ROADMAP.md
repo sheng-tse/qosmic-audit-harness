@@ -37,7 +37,7 @@ The harness produces and scores a real audit for a store it has never seen.
       (`/next`, `/build`, `code-reviewer`).
 - [x] `reference/target_report.anchor.md`, the calibration anchor, copied in from the provided
       brief. *Exit: the file exists and the skills and quality bar that cite it resolve.*
-- [ ] `scripts/crawl.mjs` that captures deep pages on Cloudflare stores (one cleared session and
+- [x] `scripts/crawl.mjs` that captures deep pages on Cloudflare stores (one cleared session and
       click-through, headful, CDP attach). *Exit: the calibration store's PDP, Where To Buy, and
       cart are captured at their real status, not a blanket 403.*
 - [ ] `eval/grade.mjs` and `eval/rubric.md`. *Exit: `node eval/grade.mjs <report>` prints a
