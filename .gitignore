@@ -9,6 +9,10 @@ __MACOSX
 # data are heavy and store-specific, so keep them out of git.
 sample_output/**/crawl/
 
+# grade.mjs writes eval.json next to whatever report it grades. The committed
+# fixtures are the report and manifest; the scored output is a byproduct.
+eval/cases/**/eval.json
+
 # This repo's .claude/ IS the deliverable, so override the global ignore of it.
 # Keep Claude Code's local-only state out, though.
 !.claude/

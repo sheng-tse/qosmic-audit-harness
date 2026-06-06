@@ -5,7 +5,8 @@
   "type": "module",
   "description": "Runtime audit harness: turn a storefront URL into a CRO audit.",
   "scripts": {
-    "crawl": "node scripts/crawl.mjs"
+    "crawl": "node scripts/crawl.mjs",
+    "test:eval": "node eval/cases/run.mjs"
   },
   "dependencies": {
     "playwright": "^1.49.0"

@@ -42,7 +42,7 @@ The harness produces and scores a real audit for a store it has never seen.
       cart are captured at their real status, not a blanket 403.*
 - [x] `eval/grade.mjs` and `eval/rubric.md`. *Exit: `node eval/grade.mjs <report>` prints a
       scorecard and writes `eval.json`.*
-- [ ] `eval/cases/` with at least one graded reference audit. *Exit: the grader runs green
+- [x] `eval/cases/` with at least one graded reference audit. *Exit: the grader runs green
       against it and fails on a deliberately broken copy.*
 - [ ] `sample_output/` for both test stores. *Exit: both reports clear the gate and the
       audit-reviewer signs off; coverage beats the prototype, gingerpeople deep pages included.*
