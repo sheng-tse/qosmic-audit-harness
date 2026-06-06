@@ -311,6 +311,9 @@ function isInternal(href, origin) {
   try { return new URL(href).origin === origin; } catch { return false; }
 }
 
+// A product detail page by URL shape: /products/<slug>, /product/<slug>, /item/<slug>.
+const isProductPath = (p) => /\/(products?|item)\/[^/]+$/i.test(p);
+
 // Sort homepage links into product and category buckets by URL shape and anchor
 // text. This is the catalog discovery path on non-Shopify stores, where there is
 // no products.json to read.
@@ -324,14 +327,90 @@ function classifyLinks(navLinks, origin) {
     seen.add(path);
     uniq.push({ href: l.href, text: l.text || '', path });
   }
-  const isProduct = (p) => /\/(products?|item)\/[^/]+$/i.test(p);
   const isCategory = (p, t) =>
     /\/(product-category|collections?|categor(y|ies)|catalog)(\/[^/]+)?$/i.test(p) ||
     /^\/shop(\/[^/]+)?$/i.test(p) ||
     /\b(all products|shop all|view all|shop now|browse)\b/i.test(t);
-  const products = uniq.filter((l) => isProduct(l.path));
-  const categories = uniq.filter((l) => !isProduct(l.path) && isCategory(l.path, l.text));
+  const products = uniq.filter((l) => isProductPath(l.path));
+  const categories = uniq.filter((l) => !isProductPath(l.path) && isCategory(l.path, l.text));
   return { products, categories };
+}
+
+// The product the homepage features most prominently: the first PDP link in
+// document order, which is almost always the hero slot.
+function firstProductPath(navLinks, origin) {
+  for (const l of navLinks) {
+    if (!isInternal(l.href, origin)) continue;
+    const path = pathOf(l.href);
+    if (isProductPath(path)) return path;
+  }
+  return null;
+}
+
+function maxVariantPrice(p) {
+  const prices = (p.variants || []).map((v) => parseFloat(v.price)).filter((n) => !isNaN(n));
+  return prices.length ? Math.max(...prices) : null;
+}
+
+// Put the flagship in slot 1, then leave the rest to spread() for variety. The
+// flagship is the homepage hero, else the first product of a Shopify featured or
+// frontpage collection, else the dearest product (a high-price anchor for AOV
+// reasoning). Slot 1 is the one pick catalog order alone tends to miss.
+async function orderProducts({ productPool, navLinks, origin, shopify, request, maxN, timeout }) {
+  if (!productPool.length) return [];
+  const byPath = new Map(productPool.map((c) => [c.path, c]));
+  let flagship = null;
+  let signal = null;
+
+  const heroPath = firstProductPath(navLinks, origin);
+  if (heroPath && byPath.has(heroPath)) { flagship = byPath.get(heroPath); signal = 'homepage-hero'; }
+
+  if (!flagship && shopify.isShopify) {
+    const featured = (shopify.collections || []).find((c) => /frontpage|featured|best.?sell|bestseller|hero/i.test(`${c.handle} ${c.title || ''}`));
+    if (featured) {
+      const r = await grab(request, `${origin}/collections/${featured.handle}/products.json?limit=1`, timeout);
+      try {
+        const first = r.ok && JSON.parse(r.body).products?.[0];
+        if (first && byPath.has(`/products/${first.handle}`)) { flagship = byPath.get(`/products/${first.handle}`); signal = 'frontpage-collection'; }
+      } catch { /* not the shape we wanted */ }
+    }
+  }
+
+  if (!flagship) {
+    const priced = productPool.filter((c) => c.price != null);
+    if (priced.length) { flagship = priced.reduce((a, b) => (b.price > a.price ? b : a)); signal = 'highest-priced'; }
+  }
+
+  const ordered = [];
+  const used = new Set();
+  if (flagship && maxN > 0) { ordered.push({ ...flagship, selectedBy: `flagship:${signal}` }); used.add(flagship.path); }
+  for (const c of spread(productPool.filter((p) => !used.has(p.path)), maxN - ordered.length)) {
+    if (ordered.length >= maxN) break;
+    if (used.has(c.path)) continue;
+    used.add(c.path);
+    ordered.push(c);
+  }
+  return ordered;
+}
+
+// Harvest PDP links off a reached category page for the second hop. Category grids
+// often lazy-load their cards, so nudge the page down before reading the links.
+async function harvestProductLinks(page, origin) {
+  await page
+    .evaluate(async () => {
+      for (let y = 0; y < document.body.scrollHeight; y += 800) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 150)); }
+      window.scrollTo(0, 0);
+    })
+    .catch(() => {});
+  const hrefs = await page.evaluate(() => Array.from(document.querySelectorAll('a[href]')).map((a) => a.href)).catch(() => []);
+  const seen = new Set();
+  const out = [];
+  for (const h of hrefs) {
+    if (!isInternal(h, origin)) continue;
+    const path = pathOf(h);
+    if (isProductPath(path) && !seen.has(path)) { seen.add(path); out.push(path); }
+  }
+  return out;
 }
 
 // ---------------------------------------------------------------- main
@@ -383,36 +462,59 @@ async function main() {
 
   // Two ways to find the catalog: Shopify's JSON when it answers, otherwise the
   // homepage links classified by URL shape and anchor text (the skill's non-Shopify path).
-  let collectionTargets, productTargets;
+  let collectionTargets, productPool;
   if (shopify.isShopify && allProducts.length) {
     collectionTargets = spread(shopify.collections || [], args.maxCollections).map((c) => ({ name: `collection-${slug(c.handle)}`, url: `${origin}/collections/${c.handle}`, match: `/collections/${c.handle}` }));
-    productTargets = spread(allProducts, args.maxProducts).map((p) => ({ name: `product-${slug(p.handle)}`, url: `${origin}/products/${p.handle}`, match: `/products/${p.handle}` }));
+    productPool = allProducts.map((p) => ({ name: `product-${slug(p.handle)}`, url: `${origin}/products/${p.handle}`, match: `/products/${p.handle}`, path: `/products/${p.handle}`, price: maxVariantPrice(p) }));
   } else {
     const { products, categories } = classifyLinks(navLinks, origin);
     collectionTargets = spread(categories, args.maxCollections).map((l) => ({ name: `collection-${slug(l.path)}`, url: l.href, match: l.path }));
-    productTargets = spread(products, args.maxProducts).map((l) => ({ name: `product-${slug(l.path)}`, url: l.href, match: l.path }));
+    productPool = products.map((l) => ({ name: `product-${slug(l.path)}`, url: l.href, match: l.path, path: l.path, price: null }));
   }
+  // Flagship into slot 1, the rest left to spread() for variety.
+  const productTargets = await orderProducts({ productPool, navLinks, origin, shopify, request, maxN: args.maxProducts, timeout: args.timeout });
 
   const captured = new Set(['/']); // homepage already done; never capture a surface twice
   const markCaptured = (url) => captured.add(pathOf(url));
 
-  // --- collections / category pages
+  // --- collections / category pages; harvest their PDP links for the second hop
+  const discoveredPdps = [];
   for (const c of collectionTargets) {
     if (captured.has(pathOf(c.url))) continue;
     markCaptured(c.url);
     await breathe();
     const nav = await reach(page, { href: c.url, match: c.match }, args.timeout);
-    record({ name: c.name, kind: 'collection', url: nav.finalUrl || c.url, status: nav.status, challenged: nav.challenged, via: nav.via, ...(await capture(page, c.name, dirs)) });
+    const surface = { name: c.name, kind: 'collection', url: nav.finalUrl || c.url, status: nav.status, challenged: nav.challenged, via: nav.via, ...(await capture(page, c.name, dirs)) };
+    record(surface);
+    // Only harvest off a category we actually reached; a challenged one tells us
+    // nothing, and we will not invent a PDP for it.
+    if (surface.state === 'ok') {
+      for (const path of await harvestProductLinks(page, origin)) if (!discoveredPdps.includes(path)) discoveredPdps.push(path);
+    }
   }
 
-  // --- products (PDP), spread across the catalog
+  // --- second hop: if the homepage linked few or no PDPs, fill the remaining product
+  // slots from the ones the category pages exposed (their hero first, then spread).
+  if (productTargets.length < args.maxProducts && discoveredPdps.length) {
+    const have = new Set(productTargets.map((t) => pathOf(t.url)));
+    const fresh = discoveredPdps.filter((p) => !have.has(p));
+    const fill = fresh.length ? [fresh[0], ...spread(fresh.slice(1), args.maxProducts - productTargets.length - 1)] : [];
+    for (const path of fill) {
+      if (productTargets.length >= args.maxProducts) break;
+      if (have.has(path)) continue;
+      have.add(path);
+      productTargets.push({ name: `product-${slug(path)}`, url: `${origin}${path}`, match: path, selectedBy: 'collection-hop' });
+    }
+  }
+
+  // --- products (PDP): flagship first, then the spread and second-hop fills
   let firstProductSurface = null;
   for (const p of productTargets) {
     if (captured.has(pathOf(p.url))) continue;
     markCaptured(p.url);
     await breathe();
     const nav = await reach(page, { href: p.url, match: p.match }, args.timeout);
-    const surface = { name: p.name, kind: 'product', url: nav.finalUrl || p.url, status: nav.status, challenged: nav.challenged, via: nav.via, ...(await capture(page, p.name, dirs)) };
+    const surface = { name: p.name, kind: 'product', url: nav.finalUrl || p.url, status: nav.status, challenged: nav.challenged, via: nav.via, ...(p.selectedBy ? { selectedBy: p.selectedBy } : {}), ...(await capture(page, p.name, dirs)) };
     record(surface);
     if (!firstProductSurface && surface.status === 200 && !surface.challenged) firstProductSurface = surface;
   }

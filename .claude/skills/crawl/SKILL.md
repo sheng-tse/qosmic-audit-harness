@@ -15,8 +15,11 @@ data. Output lands under `sample_output/<host>/crawl/`.
 ## What it captures
 
 - Homepage first; clearing it also clears Cloudflare for later requests in the same session.
-- 2 collections and 3 products spread across the catalog on Shopify stores. On non-Shopify or
-  JSON-gated stores it discovers category and content pages from the homepage nav instead.
+- 2 collections and 3 products, with the flagship in slot 1 (the homepage hero, else a Shopify
+  featured-collection or highest-priced pick) and the rest spread across the catalog for variety.
+  Products come from products.json on Shopify, otherwise from homepage links classified by URL
+  shape and anchor text; when the homepage is short on PDPs, a second hop harvests them off the
+  category pages it reached.
 - Content pages that signal intent: FAQ, Where To Buy, About, recipes, blog.
 - Cart, plus a mobile homepage screenshot.
 
